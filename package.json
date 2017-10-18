@@ -1,0 +1,21 @@
+{
+  "name": "babel-plugin-absolute-imports",
+  "version": "1.0.0",
+  "description": "transforms destructured imports into absolute imports",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "import",
+    "babel"
+  ],
+  "author": "James Coward",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "dependency-tree": "^5.11.1"
+  }
+}
