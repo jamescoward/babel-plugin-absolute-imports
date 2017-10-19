@@ -26,7 +26,7 @@ function getCache(lib) {
   const list = _dependencyTree2.default.toList({
     filename: `${dir}/${main}`,
     directory: 'node-modules',
-    filter: path => path.indexOf(`node_modules/${lib}`) !== -1 // optional
+    filter: path => path.indexOf(`node_modules/${lib}`) !== -1
   });
 
   const map = list.reduce((acc, item) => {

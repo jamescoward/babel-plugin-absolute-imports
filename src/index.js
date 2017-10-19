@@ -9,9 +9,9 @@ export default ({ types: t }) => {
         return;
       }
       path.get('specifiers').forEach((spec) => {
-        // get the local binding incase it is a { foo as bar } import
-        const name = spec.get('local').node.name;
-        const identifier = t.identifier(name);
+        const localName = spec.get('local').node.name;
+        const name = spec.get('imported').node.name;
+        const identifier = t.identifier(localName);
         const importDefaultSpecifier = t.importDefaultSpecifier(identifier);
         const pathToImport = resolver(lib, name);
         const importDeclaration = t.importDeclaration([importDefaultSpecifier], t.stringLiteral(pathToImport));
